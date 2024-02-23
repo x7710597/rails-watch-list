@@ -13,16 +13,16 @@
   </div>
 </div>
 
+<div class="container">
 <h3>My lists:</h3>
-<div class="cards w-100">
+<div class="cards">
   <% @lists.each do |list| %>
     <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-      <div class="card-category-infos">
+      <div class="card-category-infos w-400px h-200px">
         <h2 class="text-white text-center"><%= link_to list.name, list_path(list)  %></h2>
       </div>
     </div>
   <% end %>
 </div>
-
-
-<%= link_to "+Create a new movie list", new_list_path %>
+  <%= link_to "+Create a new movie list", new_list_path %>
+</div>

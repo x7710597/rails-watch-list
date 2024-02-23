@@ -1,0 +1,15 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+  <div class="container">
+    <h1 class="text-center">Pending</h1>
+  </div>
+</div>
+<%= link_to "Add new movie",  new_list_bookmark_path(@list) %>
+
+
+
+<% @bookmarks.each do |bookmark| %>
+<p><%= bookmark.movie.title %></p>
+
+<% end %>
+
+<%= link_to "< Back",  root_path %>
